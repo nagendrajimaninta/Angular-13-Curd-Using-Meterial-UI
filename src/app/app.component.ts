@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import {MatDialog} from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular8Curd';
+  constructor(private dialog:MatDialog){}
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogComponent);
+
+    /* dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    }); */
+    width:'30%'
+  }
 }
