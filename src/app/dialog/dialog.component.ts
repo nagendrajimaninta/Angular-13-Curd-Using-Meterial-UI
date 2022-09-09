@@ -22,7 +22,7 @@ export class DialogComponent implements OnInit {
     })
   }
   addProduct(){
-    alert("Test")
+    console.log(this.productForm.value);
   }
 
 }
